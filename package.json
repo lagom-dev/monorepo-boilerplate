@@ -1,0 +1,26 @@
+{
+  "name": "@monorepo/root",
+  "version": "1.0.0",
+  "private":"true",
+  "main": "index.js",
+  "author": "Barbara Santos <babs.m.santos@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "lerna": "^4.0.0",
+    "craco": "^0.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "init": "lerna bootstrap",
+    "storybook": "lerna run --stream --scope @monorepo/ui-components storybook",
+    "app-cra": "lerna run --stream --scope @monorepo/app-cra start"
+    },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
